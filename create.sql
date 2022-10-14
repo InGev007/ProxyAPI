@@ -41,6 +41,7 @@ CREATE TABLE IF NOT EXISTS `proxy` (
 CREATE TABLE IF NOT EXISTS `proxycheckers` (
   `ip` varchar(50) NOT NULL,
   `unique` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
   `lastupdate` datetime NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   UNIQUE KEY `Key` (`unique`) USING HASH
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
